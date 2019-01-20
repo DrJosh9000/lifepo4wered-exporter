@@ -17,11 +17,13 @@ import (
 var (
 	addr = flag.String("listen-address", ":8080", "The address to listen on for HTTP requests.")
 
-	lifepo4weredVars = prometheus.NewGaugeVec(prometheus.GaugeOpts{
-		Name: "lifepo4wered",
-		Help: "Variables gathered from the lifepo4wered-cli tool",
-	},
-		[]string{"var"})
+	lifepo4weredVars = prometheus.NewGaugeVec(
+		prometheus.GaugeOpts{
+			Name: "lifepo4wered",
+			Help: "Variables gathered from the lifepo4wered-cli tool",
+		},
+		[]string{"var"},
+	)
 )
 
 func init() {
