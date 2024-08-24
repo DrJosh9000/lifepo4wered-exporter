@@ -1,3 +1,4 @@
+// The lifepo4wered-exporter binary serves Prometheus metrics based on the output
 package main // import "github.com/DrJosh9000/lifepo4wered-exporter"
 
 import (
@@ -15,7 +16,7 @@ import (
 )
 
 var (
-	addr = flag.String("listen-address", ":8080", "The address to listen on for HTTP requests.")
+	addr = flag.String("listen-address", ":9454", "The address to listen on for HTTP requests.")
 
 	lifepo4weredVars = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{

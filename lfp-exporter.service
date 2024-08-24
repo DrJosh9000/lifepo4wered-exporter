@@ -1,0 +1,9 @@
+[Unit]
+Description=LiFePO4wered-Pi+ Prometheus exporter
+
+[Service]
+ExecStart=/usr/local/bin/lfp-exporter
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
